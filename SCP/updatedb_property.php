@@ -1,0 +1,218 @@
+<?php
+error_reporting(E_ALL);
+session_start();
+if($_SESSION['bpid']=="")
+{
+	echo "<script language=\"javascript\">window.location=\"index?status=2\";</script>";
+}
+else
+{
+	include "../db/db_connection.php";	
+	$data = json_decode(file_get_contents("php://input"));
+	$index = $data->id;
+	
+	$pname=$data->pname;
+	$paddress=$data->paddress;
+	$conno=$data->conno;
+	$location=$data->location;
+	$description=$data->description;
+	$latitude=$data->latitude;
+	$longitude=$data->longitude;
+	$rating=$data->rating;
+	$tripaddrating=$data->tripaddrating;
+	$extraperson=$data->extraperson;
+	$child=$data->child;
+	//$propertypicture=$data->propertypicture;
+	$cancellingpolicy=$data->cancellingpolicy;
+	$wifi=$data->wifi;
+	$tv=$data->tv;
+	$kitchen=$data->kitchen;
+	$checkin=$data->checkin;
+	$safetycard=$data->safetycard;
+	$indoorgame=$data->indoorgame;
+	$cabletv=$data->cabletv;
+	$smokingallowed=$data->smokingallowed;
+	$outdoorgame=$data->outdoorgame;
+	$gym=$data->gym;
+	$wheelchair=$data->wheelchair;
+	$kidsplayarea=$data->kidsplayarea;
+	$heating=$data->heating;
+	$breakfast=$data->breakfast;
+	$yoga=$data->yoga;
+	$internet=$data->internet;
+	$wiintercom=$data->wiintercom;
+	$ac=$data->ac;
+	$freeparking=$data->freeparking;
+	$swimmingpool=$data->swimmingpool;
+	$petsallowed=$data->petsallowed;
+	$barnrestro=$data->barnrestro;
+	$roomservice=$data->roomservice;
+	$busscenter=$data->busscenter;
+	$lounge=$data->lounge;
+	$conferencehall=$data->conferencehall;
+	$shopping=$data->shopping;
+	$ayurvedacenter=$data->ayurvedacenter;
+	$laundry=$data->laundry;
+	$security=$data->security;
+	$airporttrasport=$data->airporttrasport;
+	$atminresort=$data->atminresort;
+	$hotcoldwater=$data->hotcoldwater;
+	$firstaidkit=$data->firstaidkit;
+	$hairdryer=$data->hairdryer;
+	$hottub=$data->hottub;
+	$suitableforwvent=$data->suitableforwvent;
+	
+	
+	$spa=$data->spa;
+	$jacuzzi=$data->jacuzzi;
+	$finedinig=$data->finedinig;
+	$caffe=$data->caffe;
+	$ecotourism=$data->ecotourism;
+	$wellness_n_care=$data->wellness_n_care;
+	$heritage_n_spirituality=$data->heritage_n_spirituality;
+	$family_n_kids=$data->family_n_kids;
+	$adventure_n_explore=$data->adventure_n_explore;
+	$romantic_holiday=$data->romantic_holiday;
+	$instantbooking=$data->instantbooking;
+	
+	$property_type=$data->property_type;
+	$busstation=$data->busstation;
+	$railwaystation=$data->railwaystation;
+	$airport=$data->airport;
+	
+	$query = $dbConnection->prepare("UPDATE tble_property SET 
+	property_name=?,
+	property_address=?,
+	property_contact_no=?,
+	property_location=?,
+	property_description=?,
+	latitude=?,
+	longitude=?,
+	rating=?,
+	tripadvisorrating=?,
+	extra_person=?,
+	child=?,
+	cancelling_policy=?,
+	wifi=?,
+	tv=?,
+	kitchen=?,
+	checkin=?,	
+	safetycard=?,
+	indoorgame=?,
+	cabletv=?,
+	smokingallowed=?,
+	outdoorgame=?,
+	gym=?,
+	wheelchair=?,
+	kidsplayarea=?,
+	heating=?,
+	breakfast=?,
+	yoga=?,
+	internet=?,
+	wiintercom=?,	
+	ac=?,
+	freeparking=?,
+	swimmingpool=?,
+	petsallowed=?,
+	barnrestro=?,
+	roomservice=?,
+	busscenter=?,
+	lounge=?,
+	conferencehall=?,
+	shopping=?,
+	ayurvedacenter=?,
+	laundry=?,
+	security=?,
+	airporttrasport=?,
+	atminresort=?,
+	hotcoldwater=?,
+	firstaidkit=?,
+	hairdryer=?,
+	hottub=?,
+	suitableforwvent=?,
+	spa=?,
+	jacuzzi=?,
+	finedinig=?,
+	caffe=?,
+	ecotourism=?,
+	wellness_n_care=?,
+	heritage_n_spirituality=?,
+	family_n_kids=?,
+	adventure_n_explore=?,
+	romantic_holiday=?,
+	instantbooking=?,
+	
+	property_type=?,
+	busstation=?,
+	railwaystation=?,
+	airport=?
+	where property_id=?");
+	$query->execute(array(
+	$pname,
+	$paddress,
+	$conno,
+	$location,
+	$description,
+	$latitude,
+	$longitude,
+	$rating,
+	$tripaddrating,
+	$extraperson,
+	$child,
+	$cancellingpolicy,
+	$wifi,
+	$tv,
+	$kitchen,
+	$checkin,
+	$safetycard,
+	$indoorgame,
+	$cabletv,
+	$smokingallowed,
+	$outdoorgame,
+	$gym,
+	$wheelchair,
+	$kidsplayarea,
+	$heating,
+	$breakfast,
+	$yoga,
+	$internet,
+	$wiintercom,
+	$ac,
+	$freeparking,
+	$swimmingpool,
+	$petsallowed,
+	$barnrestro,
+	$roomservice,
+	$busscenter,
+	$lounge,
+	$conferencehall,
+	$shopping,
+	$ayurvedacenter,
+	$laundry,
+	$security,
+	$airporttrasport,
+	$atminresort,
+	$hotcoldwater,
+	$firstaidkit,
+	$hairdryer,
+	$hottub,
+	$suitableforwvent,
+	
+	$spa,
+	$jacuzzi,
+	$finedinig,
+	$caffe,
+	$ecotourism,
+	$wellness_n_care,
+	$heritage_n_spirituality,
+	$family_n_kids,
+	$adventure_n_explore,
+	$romantic_holiday,
+	$instantbooking,
+	$property_type,
+	$busstation,
+	$railwaystation,
+	$airport,	
+	$index));
+}
+?>

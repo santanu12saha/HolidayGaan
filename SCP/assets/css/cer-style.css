@@ -1,0 +1,128 @@
+body
+{
+	color: #797979;
+	background: #FFFFFF;
+	font-family: 'Ruda', sans-serif;
+	padding: 0px !important;
+	margin: 0px !important;
+	font-size:13px;
+}
+
+#wrapper
+{
+	color: #69050D;
+	font-family: 'Ruda', sans-serif;
+	font-weight: bold;
+	width: 935px;
+	margin: 10px auto 10px auto;
+	padding: 10px 10px 10px 10px;
+}
+
+#wrapper img
+{
+	width: 935px;
+	height: 650px;
+	position: relative;
+}
+
+.btn
+{
+	margin: 0 auto  0 auto;
+	padding: 10px 0 0 180px; 
+}
+
+button
+{
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: normal;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  background-color: #2ABEDB;
+  border: 1px solid #A7ADAD;
+  display: block;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+button:hover
+{
+	outline:1px solid #2CBDDB;
+	background-color: #FFFFFF;
+}
+
+.ntitle
+{
+	position: absolute;
+	top: 350px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 22px;
+   font-style: italic;
+}
+
+.ititle
+{
+	position: absolute;
+	top: 538px;
+	left: 375px;
+	font-size: 22px;
+}
+
+.etitle
+{
+	position: absolute;
+	top: 538px;
+	left: 815px;
+	font-size: 22px;
+}
+
+
+@media print
+{
+	*
+	{
+		-webkit-print-color-adjust:exact;
+	}
+	
+	@page
+	{
+		size: landscape;
+		margin: 0mm;
+	}
+	
+	.ntitle
+	{
+		position: absolute;
+		top: 313px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		font-size: 22px;
+		font-style: italic;
+	}
+	
+	.ititle
+	{
+		position: absolute;
+		top: 502px;
+		left: 245px;
+		font-size: 22px;
+	}
+	
+	.etitle
+	{
+		position: absolute;
+		top: 502px;
+		left: 685px;
+		font-size: 22px;
+	}
+	
+	button
+	{
+		display: none;
+	}
+
+}

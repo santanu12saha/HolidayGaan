@@ -1,0 +1,246 @@
+body
+{
+	margin: 0 auto;
+	padding: 30px 0 30px 0;
+	width: 100%;
+	background: #FFFFFF;
+	line-height: 1.5em;
+	font-family: Arial;
+	font-weight: normal;
+	font-size: 13px;
+	color: #000000;
+}
+
+/*************************Receipt-page Css Ends Here*************************/
+
+#grdrwrapper
+{
+	margin: 10px 50px 10px 50px;
+	padding: 10px 10px 10px 10px; 
+	border: 1px solid #efefef;
+}
+
+#grdrwrapper table
+{
+	margin: 10px auto 10px auto;
+	padding: 10px 10px 10px 10px;
+	width: 100%;
+}
+
+button
+{
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: normal;
+  color: #000000;
+  text-decoration: none;
+  text-align: left;
+  background-color: #2ABEDB;
+  border: 1px solid #A7ADAD;
+  display: block;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+}
+
+button:hover
+{
+	outline:1px solid #2CBDDB;
+	background-color: #FFFFFF;
+}
+
+.logo
+{
+	padding: 5px 0 5px 0;
+	border-bottom: 1px solid #000000; 
+}
+
+.logo strong
+{
+	font-family: Helvetica;
+	font-size: 22px;
+	font-weight: bold;
+	color: #00066B;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;	
+	vertical-align: top;	
+	display:block;
+	padding: 10px 5px 10px 5px;
+}
+
+.logo span
+{
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: normal;
+	color: #00066B;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;	
+	vertical-align: top;	
+	display:block;
+	padding: 2px 5px 2px 5px;
+}
+
+h1
+{
+	font-family: Helvetica;
+	font-size: 24px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-align: center;	
+	display: block;
+	padding: 5px 0 5px 0;
+}
+
+.regards
+{
+	font-family: Helvetica;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	text-align: right;	
+	display: inline-block;
+	padding: 5px 0 5px 0;
+}
+
+strong
+{
+	font-family: Helvetica;
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px 0 5px 0;
+}
+
+span
+{
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: lighter;
+	color: #000000;
+	text-decoration: none;	
+	display: inline-block;
+	padding: 5px 0 5px 0;
+}
+
+.text
+{
+	font-family: Helvetica;
+	font-size: 14px;
+	font-weight: lighter;
+	color: #000000;
+	text-decoration: none;	
+	display: inline-block;
+	padding: 5px 0 5px 0;
+}
+
+.dotted
+{
+	padding: 5px 5px 0px 5px;
+	line-height: 15px;
+	border-bottom: 1px dotted #000000;
+}
+
+/**********************Receipt-Print Css Starts Here**********************/
+@media print
+{
+	
+	@page
+	{
+		size: portrait;
+		margin: 0 auto 0 auto;
+	}
+	
+	body
+	{
+		margin: 0 auto 0 auto;
+		padding: 30px 20px 30px 20px;
+		background-color: #FFFFFF;
+		line-height: 1.5em;
+		font-family: Arial;
+		font-weight: normal;
+		font-size: 13px;
+		color: #000000;
+		width: 21cm;
+		height: 27.5cm;
+		box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.75);
+	}
+	
+	#grdrwrapper
+	{
+		margin: 10px 30px 10px 30px;
+		padding: 10px 10px 10px 10px; 
+		border: 1px solid #efefef;
+	}
+
+	#grdrwrapper table
+	{
+		margin: 10px auto 10px auto;
+		padding: 10px 10px 10px 10px;	
+		width: 100%;
+	}
+	
+	button
+	{
+	  font-family: Arial;
+	  font-size: 13px;
+	  font-weight: normal;
+	  color: #000000;
+	  text-decoration: none;
+	  text-align: left;
+	  background-color: #2ABEDB;
+	  border: 1px solid #A7ADAD;
+	  display: none;
+	  padding: 10px 20px 10px 20px;
+	  cursor: pointer;
+	}
+	
+	button:hover
+	{
+		outline:1px solid #2CBDDB;
+		background-color: #FFFFFF;
+	}
+	
+	h1
+	{
+		font-family: Helvetica;
+		font-size: 16px;
+		font-weight: bold;
+		color: #000000;
+		text-decoration: none;
+		text-align: center;	
+		display: block;
+		padding: 5px 0 5px 0;
+	}
+	
+	strong
+	{
+		font-family: Helvetica;
+		font-size: 12px;
+		font-weight: bold;
+		color: #000000;
+		text-decoration: none;
+		display: inline-block;
+		padding: 5px 0 5px 0;
+	}
+	
+	span
+	{
+		font-family: Helvetica;
+		font-size: 11px;
+		font-weight: lighter;
+		color: #000000;
+		text-decoration: none;
+		display: inline-block;
+		padding: 5px 0 5px 0;
+    	word-wrap: break-word;
+	}
+}
+/**********************Receipt-Print Css Ends Here**********************/
+
+/*************************Receipt-page Css Ends Here*************************/
